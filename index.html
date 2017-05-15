@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>desk</title>
+    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/AltspaceVR/AltspaceSDK/v2.4.2/dist/altspace.min.js"></script>
+</head>
+<body>
+	<a-assets>
+    		<a-asset-item id="desk" src="files/desk.dae"></a-asset-item>
+		<img id="banner" src="files/js-banner.png">
+	</a-assets>    
+  
+  <a-scene altspace="fullspace: true" sync-system="author: altspacevr; app: sound-sync-soundboard">
+
+	<a-entity id="applause"
+		geometry="primitive: box" material="color: blue" position="8.2 4 -6.5" rotation="0 20 0" scale="0.5 0.5 0.1"
+		n-sound="src: files/short-applause1.wav; volume: 0.7; oneshot: true; on: click"
+		altspace-cursor-collider="enabled: true"
+		sync="own-on: mousedown" sync-n-sound>
+		<a-entity n-text="fontSize: 2; text: Applause" position="0 0.7 0"></a-entity>
+	</a-entity>
+
+ 	<a-entity id="cheer"
+		geometry="primitive: box" material="color: green" position="9.2 4 -6.8" rotation="0 20 0" scale="0.5 0.5 0.1"
+		n-sound="src: files/cheer1.wav; volume: 0.7; oneshot: true; on: click"
+		altspace-cursor-collider="enabled: true"
+		sync="own-on: mousedown" sync-n-sound>
+		<a-entity n-text="fontSize: 2; text: Cheer" position="0 0.7 0"></a-entity>
+	</a-entity>
+  
+	<a-entity id="boo"
+		geometry="primitive: box" material="color: red" position="10.2 4 -7.1" rotation="0 20 0" scale="0.5 0.5 0.1"
+		n-sound="src: files/boo2.wav; volume: 0.7; oneshot: true; on: click"
+		altspace-cursor-collider="enabled: true"
+		sync="own-on: mousedown" sync-n-sound>
+		<a-entity n-text="fontSize: 2; text: Boo" position="0 0.7 0"></a-entity>
+	</a-entity>
+  
+	<a-entity id="laugh"
+		geometry="primitive: box" material="color: yellow" position="11.2 4 -7.4" rotation="0 20 0" scale="0.5 0.5 0.1"
+		n-sound="src: files/laugh1.wav; volume: 0.7; oneshot: true; on: click"
+		altspace-cursor-collider="enabled: true"
+		sync="own-on: mousedown" sync-n-sound>
+		<a-entity n-text="fontSize: 2; text: laugh" position="0 0.7 0"></a-entity>
+	</a-entity>	
+  
+  <a-entity collada-model="#desk" light="type: ambient; color: #CCC" position="10.2 -0.8 -6.5" scale="0.8 0.8 0.8" rotation="0 20 0"></a-entity>
+	<a-image src="#banner" position="10.64 -0.42 -5.42" rotation="0 20 0" width="2.2" height="0.6"></a-image>
+	
+  </a-scene>
+</body>
+</html>
